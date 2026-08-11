@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игорь Николаев — Fullstack разработчик</title>
+     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel ="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">&lt;<span>dev</span>/&gt;</div>
+        <nav id="navMenu">
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contact">Контакты</a>
+            <button class="theme-toggle" onclick="toggleTheme()" aria-label="Переключить тему">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </nav>
+        <button class="mobile-menu" onclick="toggleMobileMenu()" aria-label="Меню">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-code"></i> Доступен для заказов
+            </div>
+            <h1>
+                Привет, я <span class="highlight">Игорь Николаев</span>
+            </h1>
+            <p>
+                Fullstack разработчик. Строю современные веб-приложения
+                на React,VueJ JS, Node.js и PostgreSQL.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Мои проекты
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Связаться
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">3+</div>
+                    <div class="stat-label">Лет опыта</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">20+</div>
+                    <div class="stat-label">Проектов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Клиентов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+        <h2 class="section-title">Обо мне</h2>
+        <p class="section-subtitle">Кто я и чем занимаюсь</p>
+        <div class="about-grid">
+            <div class="about-image">
+                <img class="image" src="/image/photo.jpeg">
+            </div>
+            <div class="about-text">
+                <h3>Fullstack разработчик </h3>
+                <p>
+                    Занимаюсь веб-разработкой с 2023 года. 
+                    Выполняю широкий спектр задач от верстки до разработки сложных SPA с 
+                    собственной серверной логикой и базами данных.
+                </p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Igornikolaev93" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                     <a href="https://t.me/@inikolae" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                   
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+        <h2 class="section-title">Навыки</h2>
+        <p class="section-subtitle">Мой технологический стек</p>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-vuejs"></i>
+                <span>Vue JS</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+            </div>
+             <div class="skill-card">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <span>PostgreSQL</span>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+        <h2 class="section-title">Проекты</h2>
+        <p class="section-subtitle">Мои последние работы</p>
+        <div class="projects-grid" id="projectsGrid">
+            
+        </div>
+    </section>
+        <section id="sites">
+        <h2 class="section-title">Верстка сайтов</h2>
+        <p class="section-subtitle">Мои последние работы</p>
+        <div class="projects-grid" id="sitesGrid">
+            <!-- Проекты будут добавлены через JavaScript -->
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+        <h2 class="section-title">Контакты</h2>
+        <p class="section-subtitle">Давайте обсудим ваш проект</p>
+        <div class="contact-wrapper">
+            <form class="contact-form" id="contactForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Сообщение" required></textarea>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Отправить
+                </button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email</strong>
+                        igorn2649@gmail.com
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Телефон</strong>
+                        +7 (911) 828-59-54
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Локация</strong>
+                        Москва, Россия
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-telegram"></i>
+                    <div>
+                        <strong>Telegram</strong>
+                        @inikolae
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2026 <span>Игорь Николаев</span>.</p>
+    </footer>
+
+    <!-- ===== TOAST ===== -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle" style="color: var(--accent);"></i>
+        Сообщение отправлено!
+    </div>
+
+
+    <script>
+        // ===== ДАННЫЕ =====
+        const projects = [{
+            id: 1,
+            title: 'Streaming service',
+            description: 'Интерактивная платформа для поиска фильмов, просмотра трейлеров, составления списка избранного и авторизации.',
+            stack: ['Vue JS' , 'TS'],
+            github: 'https://github.com/Igornikolaev93/streaming_service',
+            demo: 'https://igornikolaev93.github.io/streaming_service/',
+            image: './image/sc.png'
+        }, {
+            id: 2,
+            title: 'CryptoExchange',
+            description: 'Современный веб-интерфейс для безопасного обмена криптовалют с интеграцией реальных курсов и системой аутентификации.',
+            stack: ['React JS', 'Node JS', 'PostgreSQL'],
+            github: 'https://github.com/Igornikolaev93/cryptoApp',
+            demo: 'https://igornikolaev93.github.io/cryptoApp/',
+            image: './image/cr.png'
+        }, {
+            id: 3,
+            title: 'Дашкборд',
+            description: 'Дашборд для бизнес-аналитики с графиками, экспортом и AI-отчётами.',
+            stack: ['Vue.js', 'D3.js', 'Node.js', 'MongoDB', 'Docker'],
+            github: '#',
+            demo: '#',
+            image: '📊'
+        }];
+
+        const sites = [{
+            id: 1,
+            title: 'Blanchard Galery',
+            description: 'Адаптивная вертка сайта художественной галереи Blanchard',
+            stack: ['HTML','CSS'],
+            github: 'https://github.com/Igornikolaev93/WEB',
+            demo: 'https://igornikolaev93.github.io/WEB/',
+            image: './image/s1.png'
+        }, {
+            id: 2,
+            title: 'Traveling',
+            description: 'Адаптивная вертка сайта Traveling landing',
+            stack: ['HTML','CSS', 'JS'],
+            github: 'https://github.com/Igornikolaev93/traveling',
+            demo: 'https://igornikolaev93.github.io/traveling/',
+            image: './image/s2.png'
+        }, {
+            id: 3,
+            title: 'Coffee Landing',
+            description: 'Адаптивная вертка сайта Coffee landing',
+            stack: ['HTML','CSS', 'JS'],
+            github: 'https://github.com/Igornikolaev93/coffee',
+            demo: 'https://igornikolaev93.github.io/coffee/',
+            image: './image/cof.png'
+        },
+        {
+            id: 4,
+            title: 'Сеть отелей Lagoona',
+            description: 'Адаптивная вертка сайта Hotel Lagoona',
+            stack: ['HTML','CSS', 'JS'],
+            github: 'https://github.com/Igornikolaev93/lagoona',
+            demo: 'https://igornikolaev93.github.io/lagoona/',
+            image: './image/lagoona.png'
+        },
+         {
+            id: 5,
+            title: 'Строительная компания Evclid',
+            description: 'Адаптивная вертка сайта строительной компании Evclid',
+            stack: ['HTML','CSS', 'JS'],
+            github: 'https://github.com/Igornikolaev93/Evclid',
+            demo: 'https://igornikolaev93.github.io/Evclid/',
+            image: './image/evclid.png'
+        },
+        ];
+
+         function renderSites() {
+            const grid = document.getElementById('sitesGrid');
+            grid.innerHTML = sites.map(p => `
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('${p.image}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <!-- Если картинка не загрузилась, показываем иконку -->
+                        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-size: 48px; color: rgba(255,255,255,0.3);">
+                            ${p.image.startsWith('./') || p.image.startsWith('http') ? '' : p.image}
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                        <div class="project-stack">
+                            ${p.stack.map(s => `<span>${s}</span>`).join('')}
+                        </div>
+                        <div class="project-links">
+                            <a href="${p.github}" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="${p.demo}" class="demo-link"><i class="fas fa-external-link-alt"></i> Демо</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+
+
+       function renderProjects() {
+            const grid = document.getElementById('projectsGrid');
+            grid.innerHTML = projects.map(p => `
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('${p.image}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                        <!-- Если картинка не загрузилась, показываем иконку -->
+                        <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-size: 48px; color: rgba(255,255,255,0.3);">
+                            ${p.image.startsWith('./') || p.image.startsWith('http') ? '' : p.image}
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                        <div class="project-stack">
+                            ${p.stack.map(s => `<span>${s}</span>`).join('')}
+                        </div>
+                        <div class="project-links">
+                            <a href="${p.github}" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="${p.demo}" class="demo-link"><i class="fas fa-external-link-alt"></i> Демо</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+
+
+        // ===== ТЕМА =====
+        function getTheme() {
+            return document.documentElement.getAttribute('data-theme');
+        }
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            const icon = document.getElementById('themeIcon');
+            icon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+            localStorage.setItem('theme', theme);
+        }
+
+        function toggleTheme() {
+            const current = getTheme();
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        }
+
+        // ===== МОБИЛЬНОЕ МЕНЮ =====
+        function toggleMobileMenu() {
+            document.getElementById('navMenu').classList.toggle('open');
+        }
+
+        // ===== ТОАСТ =====
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        // ===== ЗАКРЫТЬ МЕНЮ ПРИ КЛИКЕ =====
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navMenu').classList.remove('open');
+            });
+        });
+
+        // ===== ФОРМА =====
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast();
+            e.target.reset();
+        });
+
+        // ===== ИНИЦИАЛИЗАЦИЯ =====
+        renderProjects();
+        renderSites();
+
+        // Тема из localStorage
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        setTheme(savedTheme);
+
+      
+    </script>
+
+</body>
+</html>
